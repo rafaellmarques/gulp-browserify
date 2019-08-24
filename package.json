@@ -1,0 +1,32 @@
+{
+	"name": "gulp-browserify",
+	"version": "1.0.0",
+	"description": "",
+	"private": true,
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/rafaellmarques/gulp-browserify.git"
+	},
+	"keywords": [
+		"gulp",
+		"browserify"
+	],
+	"author": "Rafael Marques",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/rafaellmarques/gulp-browserify/issues"
+	},
+	"homepage": "https://github.com/rafaellmarques/gulp-browserify#readme",
+	"devDependencies": {
+		"@babel/core": "^7.5.5",
+		"@babel/preset-env": "^7.5.5",
+		"babelify": "^10.0.0",
+		"browserify": "^16.5.0",
+		"gulp": "^4.0.2",
+		"gulp-cli": "^2.2.0",
+		"vinyl-source-stream": "^2.0.0"
+	}
+}
