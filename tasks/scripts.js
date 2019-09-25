@@ -1,4 +1,4 @@
-﻿// Packages
+// Packages
 const gulp = require("gulp");
 const babelify = require("babelify");
 const browserify = require("browserify");
@@ -6,20 +6,17 @@ const vinylsourcestream = require("vinyl-source-stream");
 
 // Paths
 const paths = {
-	entry: "./src/assets/scripts/bundle.js",
-	output: "./dist/js/"
+	src: "./src/assets/js/bundle.js",
+	dest: "./dist/js/"
 };
 
 // Task
 scriptTranspilation = () => {
-	return browserify(paths.entry)
+	return browserify(paths.src)
 		.transform(babelify)
 		.bundle()
-		.on("error", function(err) {
-			console.log("Error: " + err.message);
-		})
-		.pipe(vinylsourcestream("bundle.js"))
-		.pipe(gulp.dest(paths.output));
+		.pipe(vinylsourcestream("store.js"))
+		.pipe(gulp.dest(paths.dest));
 };
 
 // Export
